@@ -2,7 +2,7 @@ var menuState = {
 
 	create: function() { 
 		// Name of the game
-		var nameLabel = game.add.text(game.world.centerX, 80, 'Name', { font: '50px Arial', fill: '#ffffff' });
+		var nameLabel = game.add.text(game.world.centerX, 80, 'Click the four elements !!!', { font: '33px Arial', fill: '#ffffff' });
 		nameLabel.anchor.setTo(0.5, 0.5);
 
 		// How to start the game
@@ -11,7 +11,7 @@ var menuState = {
 		game.add.tween(startLabel).to({angle: -2}, 500).to({angle:2}, 500).loop().start(); 
 
 		// Add a mute button
-		this.muteButton = game.add.button(20, 20, 'mute', this.toggleSound, this);
+		this.muteButton = game.add.button(460, 10, 'mute', this.toggleSound, this);
 		this.muteButton.input.useHandCursor = true;
 		if (game.sound.mute) {
 			this.muteButton.frame = 1;
